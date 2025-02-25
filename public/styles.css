@@ -1,0 +1,322 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #2300c0;
+    color: white;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+nav .menu {
+    list-style-type: none;
+    display: flex;
+}
+
+nav .menu li {
+    margin-left: 20px;
+}
+
+nav .menu a {
+    color: #f1c40f;
+    text-decoration: none;
+}
+
+nav .search-bar input {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+nav .search-bar button {
+    padding: 5px 10px;
+    background-color: #f1c40f;
+    color: black;
+    cursor: pointer;
+}
+
+/* Hero (Carrossel de Ofertas) */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero .carousel img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.hero .promo-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+}
+
+.hero .promo-text h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: red;
+    text-shadow: 2px 2px 5px black;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background-color: #f1c40f;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Produtos em Destaque */
+.featured-products {
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.featured-products h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product-item {
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+}
+
+.product-item h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.product-item p {
+    font-size: 16px;
+    color: #e74c3c;
+    margin-top: 5px;
+}
+
+.product-item .btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #2300c0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Banner de Ofertas */
+.offer-banner {
+    background-color: #f1c40f;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.offer-banner .banner-content h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.offer-banner .banner-content p {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Produtos em Oferta */
+.offer-products {
+    padding: 20px;
+}
+
+.offer-products h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Título da Página de Contato */
+.contact-header {
+    background-color: #f8f8f8;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.contact-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Formulário de Contato */
+.contact-form {
+    padding: 40px 20px;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-container h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button.btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Detalhes de Contato */
+.contact-details {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact-details h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-details ul li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.contact-details ul li strong {
+    font-weight: bold;
+}
+
+/* Título da Página de Login */
+.login-header {
+    background-color: #f8f8f8;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.login-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Formulário de Login */
+.login-form {
+    padding: 40px 20px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-links ul {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+footer .footer-social {
+    margin-top: 10px;
+}
+
+

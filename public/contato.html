@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - EletroPoint</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="app.js" defer></script> 
+</head>
+<body>
+
+    <!-- Barra de navegação -->
+    <header>
+        <nav>
+            <div class="logo">
+                <nav>
+                <img src="/img/—Pngtree—thunder and bolt flash vector_4723241.png" alt="logo" width="60" height="60">
+                <a href="/">EletroPoint</a>
+            </nav>
+            </div>
+            <ul class="menu">
+                <li><a href="/">Início</a></li>
+                <li><a href="/produtos">Produtos</a></li>
+                <li><a href="/ofertas">Ofertas</a></li>
+                <li><a href="/contato">Contato</a></li>
+                <li><a href="/login" class="active">Entrar</a></li>
+                <li><a href="/carrinho">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Título da Página de Contato -->
+    <section class="contact-header">
+        <h1>Entre em Contato</h1>
+        <p>Tem alguma dúvida? Estamos aqui para ajudar!</p>
+    </section>
+
+    <!-- Formulário de Contato -->
+    <section class="contact-form">
+        <div class="form-container">
+            <h2>Fale Conosco</h2>
+            <form action="/enviar-contato" method="POST">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required placeholder="Seu nome completo">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="Seu e-mail">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" required placeholder="Escreva sua mensagem" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Detalhes de Contato -->
+    <section class="contact-details">
+        <h2>Outras Formas de Contato</h2>
+        <p>Se preferir, entre em contato conosco por:</p>
+        <ul>
+            <li><strong>Telefone:</strong> (11) 1234-5678</li>
+            <li><strong>E-mail:</strong> contato@eletropoint.com.br</li>
+            <li><strong>Endereço:</strong> Rua 15, 123, São Paulo, SP</li>
+        </ul>
+    </section>
+    
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-links">
+            <ul>
+                <li><a href="/sobre">Sobre Nós</a></li>
+                <li><a href="/termos">Termos de Uso</a></li>
+                <li><a href="/politica">Política de Privacidade</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <p>Siga-nos nas redes sociais</p>
+            <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+        </div>
+        <p>&copy; 2024 EletroPoint. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

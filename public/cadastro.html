@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - EletroPoint</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script> 
+</head>
+<body>
+
+    <!-- Barra de navegação -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">EletroPoint</a>
+            </div>
+            <ul class="menu">
+                <li><a href="/">Início</a></li>
+                <li><a href="/produtos">Produtos</a></li>
+                <li><a href="/ofertas">Ofertas</a></li>
+                <li><a href="/contato">Contato</a></li>
+                <li><a href="/login" class="active">Entrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Título da Página de Login -->
+    <section class="login-header">
+        <h1>Cadastrar Conta</h1>
+        <p>Por favor, digite seu e-mail e senha para cadastrar sua conta.</p>
+    </section>
+
+    <!-- Formulário de Cadastro -->
+    <section id="cadastro-form" class="cadastro-form">
+        <div class="form-container">
+            <h2>Cadastro</h2>
+            <form action="/cadastro" method="POST">
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+                </div>
+                <button type="submit" class="btn">Cadastrar</button>
+            </form>
+            <p class="form-footer">Entrar na conta <a href="login.html">Entrar</a></p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-links">
+            <ul>
+                <li><a href="/sobre">Sobre Nós</a></li>
+                <li><a href="/termos">Termos de Uso</a></li>
+                <li><a href="/politica">Política de Privacidade</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <p>Siga-nos nas redes sociais</p>
+            <a href="">Facebook</a> | <a href="">Instagram</a> | <a href="">Twitter</a>
+        </div>
+        <p>&copy; 2024 EletroPoint. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

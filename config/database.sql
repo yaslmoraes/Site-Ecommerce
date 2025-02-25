@@ -1,0 +1,28 @@
+CREATE TABLE produtos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    descricao TEXT,
+    preco DECIMAL(10,2) NOT NULL,
+    imagem VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    senha VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE pedidos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT,
+    total DECIMAL(10,2) NOT NULL,
+    data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);
+
+CREATE TABLE contatos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    contato_id INT,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    mensagem VARCHAR(255) NOT NULL
+);
