@@ -128,8 +128,29 @@ app.post("/logar", (req, res) => {
     });
 });
 
+// Rota para enviar o contato
+app.post("/contatar", (req, res) => {
+    const { nome, email, mensagem } = req.body;
+
+    // Verificar se todos os campos foram preenchidos
+    if (!nome || !email || !mensagem) {
+        return res.status(400).json({ error: "Todos os campos são obrigatórios." });
+    }
+
+    // Inserir o usuário no banco de dados
+    db.query("INSERT INTO contatos (nome, email, mensagem) VALUES (?, ?, ?)", [nome, email, mensagem], (err, result) => {
+        if (err) {
+            console.error("Erro ao salvar contato:", err);
+            return res.status(500).json({ error: "Erro no servidor." });
+        }
+
+        res.status(201).json({ message: "Contato salvo com sucesso!" }); 
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
+
 
 

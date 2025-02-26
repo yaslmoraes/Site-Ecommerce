@@ -102,5 +102,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const formContato = document.getElementById("contact-form");
+
+    formContato.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        fetch("http://localhost:5000/contatar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nome: name,
+                email: email,
+                mensagem: message
+            })
+        })
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(err => Promise.reject(err)); 
+            }
+            return response.json(); 
+        })
+        .then(data => {
+            console.log("Contato salvo:", data);
+        })
+        .catch(error => {
+            console.error("Erro ao salvar:", error);
+            alert(error.error || "Erro desconhecido ao salvar.");
+        });
+    });
+});
+
 
 
