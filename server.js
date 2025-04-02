@@ -32,6 +32,23 @@ app.get("/produtos", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "produtos.html"));
 });
 
+app.get("/produtosInicio", (req, res) => {
+    db.query("SELECT * FROM produtos LIMIT 3", (err, results) => {
+        if (err) {
+            console.error("Erro ao buscar produtos:", err);
+            res.status(500).send("Erro no servidor");
+            return;
+        }
+
+        const produtosCorrigidos = results.map(produto => ({
+            ...produto,
+            preco: Number(produto.preco)
+        }));
+
+        res.json(produtosCorrigidos);
+    });
+});
+
 app.get("/produtoss", (req, res) => {
     db.query("SELECT * FROM produtos", (err, results) => {
         if (err) {

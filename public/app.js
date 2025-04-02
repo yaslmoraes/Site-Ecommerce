@@ -1,4 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
+    fetch("http://localhost:5000/produtosInicio")
+    .then(response => response.text())
+    .then(text => {
+        console.log("Resposta da API:", text); 
+        return JSON.parse(text); 
+    })
+    .then(produtos => {
+        console.log("Produtos carregados:", produtos);
+        const productList = document.getElementById("product-list");
+
+        produtos.forEach(produto => {
+            const productItem = document.createElement("div");
+            productItem.classList.add("product-item");
+
+            productItem.innerHTML = `
+                <img src="${produto.imagem}" alt="${produto.nome}" width="200" height="200">
+                <h3>${produto.nome}</h3>
+                <p>${produto.descricao}</p>
+                <p>R$ ${Number(produto.preco).toFixed(2)}</p>
+                <button class="btn">Adicionar ao Carrinho</button>
+            `;
+
+            productList.appendChild(productItem);
+        });
+    })
+    .catch(error => console.error("Erro ao carregar produtos:", error));
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
     fetch("http://localhost:5000/produtoss")
     .then(response => response.text())
     .then(text => {
